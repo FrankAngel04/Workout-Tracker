@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Shell.NavBarIsVisible="False"
+             HideSoftInputOnTapped="True"
+             xmlns:vm="clr-namespace:D424.ViewModels"
+             xmlns:class="clr-namespace:D424.Classes"
+             x:Class="D424.Pages.StartRoutinePage"
+             x:DataType="vm:RoutineViewModel"
+             BackgroundColor="#121212">
+
+    <Grid RowDefinitions="Auto, *" Padding="15">
+
+        <Grid Grid.Row="0" ColumnDefinitions="Auto, *, Auto" ColumnSpacing="10">
+            <Button Text="✖"
+                    FontSize="22"
+                    TextColor="White"
+                    BackgroundColor="Red"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    WidthRequest="50"
+                    Clicked="CloseButton_OnClicked"/>
+
+            <Frame Grid.Column="1"
+                   Padding="10"
+                   BackgroundColor="#1E1E1E"
+                   CornerRadius="10"
+                   HorizontalOptions="FillAndExpand">
+                <VerticalStackLayout HorizontalOptions="Center">
+                    <Label Text="{Binding NewRoutine.Name}"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           HorizontalTextAlignment="Center"/>
+                    <Label Text="{Binding WorkoutDuration}"
+                           FontSize="16"
+                           TextColor="Gray"
+                           HorizontalTextAlignment="Center"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Button Grid.Column="2"
+                    Text="✔"
+                    x:Name="SaveButton"
+                    FontSize="22"
+                    BackgroundColor="LimeGreen"
+                    TextColor="White"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    WidthRequest="50"
+                    IsEnabled="False"
+                    Command="{Binding FinishAndSaveRoutineCommand}"/>
+        </Grid>
+
+        <CollectionView Grid.Row="1"
+                        ItemsSource="{Binding ExerciseList}"
+                        Margin="0,15,0,15">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="class:Exercises">
+                    <Frame BackgroundColor="#1E1E1E"
+                           CornerRadius="10"
+                           Padding="15"
+                           Margin="0,5">
+                        <VerticalStackLayout Spacing="8">
+                            <Label Text="{Binding name}" 
+                                   FontSize="18"
+                                   TextColor="White"
+                                   FontAttributes="Bold"/>
+                            
+                            <Grid ColumnDefinitions="50, *, *, *, Auto"
+                                  ColumnSpacing="10"
+                                  Margin="5,10,5,5">
+                                <Label Text="Sets" FontAttributes="Bold" TextColor="White" Grid.Column="0" HorizontalTextAlignment="Center"/>
+                                <Label Text="Prev" FontAttributes="Bold" TextColor="White" Grid.Column="1" HorizontalTextAlignment="Center"/>
+                                <Label Text="lbs" FontAttributes="Bold" TextColor="White" Grid.Column="2" Margin="10,0,0,0"/>
+                                <Label Text="Reps" FontAttributes="Bold" TextColor="White" Grid.Column="3" Margin="-5,0,0,0"/>
+                                <Label Text="✔" FontAttributes="Bold" TextColor="White" Grid.Column="4" HorizontalTextAlignment="Center"/>
+                            </Grid>
+
+                            <CollectionView ItemsSource="{Binding ExerciseSets}">
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate x:DataType="class:ExerciseSets">
+                                        <Frame BackgroundColor="{Binding IsCompleted, Converter={StaticResource BoolToColorConverter}}"
+                                               CornerRadius="10"
+                                               BorderColor="Transparent"
+                                               Padding="0,5"
+                                               Margin="5,2,0,2">
+                                            <Grid ColumnDefinitions="50, *, *, *, Auto"
+                                                  ColumnSpacing="5">
+                                                <Label Grid.Column="0"
+                                                       Text="{Binding SetNumber}"
+                                                       FontSize="14"
+                                                       FontAttributes="Bold"
+                                                       TextColor="White"
+                                                       HorizontalTextAlignment="Center"
+                                                       VerticalTextAlignment="Center"/>
+                                                <Label Grid.Column="1"
+                                                       Text="{Binding Previous}"
+                                                       FontSize="14"
+                                                       TextColor="Gray"
+                                                       HorizontalTextAlignment="Center"
+                                                       VerticalTextAlignment="Center"/>
+                                                <Frame Grid.Column="2" Padding="5,5" BorderColor="Transparent" CornerRadius="10" BackgroundColor="#333">
+                                                    <Frame.Triggers>
+                                                        <DataTrigger TargetType="Frame" Binding="{Binding IsCompleted}" Value="True">
+                                                            <Setter Property="BackgroundColor" Value="LimeGreen"/>
+                                                        </DataTrigger>
+                                                    </Frame.Triggers>
+                                                    <Entry Text="{Binding Weight, Mode=TwoWay}"
+                                                           Placeholder="0"
+                                                           Keyboard="Numeric"
+                                                           Focused="OnEntryFocused"
+                                                           TextColor="White"
+                                                           FontSize="14"
+                                                           BackgroundColor="Transparent"
+                                                           HorizontalTextAlignment="Center"/>
+                                                </Frame>
+                                                <Frame Grid.Column="3" Padding="5" BorderColor="Transparent" CornerRadius="10" BackgroundColor="#333">
+                                                    <Frame.Triggers>
+                                                        <DataTrigger TargetType="Frame" Binding="{Binding IsCompleted}" Value="True">
+                                                            <Setter Property="BackgroundColor" Value="LimeGreen"/>
+                                                        </DataTrigger>
+                                                    </Frame.Triggers>
+                                                    <Entry Text="{Binding Reps, Mode=TwoWay}"
+                                                           Placeholder="0"
+                                                           Keyboard="Numeric"
+                                                           Focused="OnEntryFocused"
+                                                           TextColor="White"
+                                                           FontSize="14"
+                                                           BackgroundColor="Transparent"
+                                                           HorizontalTextAlignment="Center"/>
+                                                </Frame>
+                                                <CheckBox Grid.Column="4"
+                                                          IsChecked="{Binding IsCompleted, Mode=TwoWay}"
+                                                          CheckedChanged="OnSetCompleted"/>
+                                            </Grid>
+                                        </Frame>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>

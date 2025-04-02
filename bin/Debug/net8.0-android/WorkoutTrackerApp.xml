@@ -1,0 +1,394 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WorkoutTrackerApp</name>
+    </assembly>
+    <members>
+        <member name="T:D424.Classes.ExerciseSets">
+            <inheritdoc/>
+        </member>
+        <member name="P:D424.Classes.ExerciseSets.IsCompleted">
+            <inheritdoc cref="F:D424.Classes.ExerciseSets.isCompleted"/>
+        </member>
+        <member name="T:D424.ViewModels.ExerciseSetViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:D424.ViewModels.ExerciseSetViewModel.ExerciseSets">
+            <inheritdoc cref="F:D424.ViewModels.ExerciseSetViewModel.exerciseSets"/>
+        </member>
+        <member name="P:D424.ViewModels.ExerciseSetViewModel.SelectedSet">
+            <inheritdoc cref="F:D424.ViewModels.ExerciseSetViewModel.selectedSet"/>
+        </member>
+        <member name="F:D424.ViewModels.ExerciseSetViewModel.addSetCommand">
+            <summary>The backing field for <see cref="P:D424.ViewModels.ExerciseSetViewModel.AddSetCommand"/>.</summary>
+        </member>
+        <member name="P:D424.ViewModels.ExerciseSetViewModel.AddSetCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:D424.ViewModels.ExerciseSetViewModel.AddSet(D424.Classes.Exercises)"/>.</summary>
+        </member>
+        <member name="F:D424.ViewModels.ExerciseSetViewModel.deleteSetCommand">
+            <summary>The backing field for <see cref="P:D424.ViewModels.ExerciseSetViewModel.DeleteSetCommand"/>.</summary>
+        </member>
+        <member name="P:D424.ViewModels.ExerciseSetViewModel.DeleteSetCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:D424.ViewModels.ExerciseSetViewModel.DeleteSet(D424.Classes.ExerciseSets)"/>.</summary>
+        </member>
+        <member name="F:D424.ViewModels.ExerciseSetViewModel.addUpdatedSetCommand">
+            <summary>The backing field for <see cref="P:D424.ViewModels.ExerciseSetViewModel.AddUpdatedSetCommand"/>.</summary>
+        </member>
+        <member name="P:D424.ViewModels.ExerciseSetViewModel.AddUpdatedSetCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:D424.ViewModels.ExerciseSetViewModel.AddUpdatedSet(D424.Classes.Exercises)"/>.</summary>
+        </member>
+        <member name="F:D424.ViewModels.ExerciseSetViewModel.deleteUpdatedSetCommand">
+            <summary>The backing field for <see cref="P:D424.ViewModels.ExerciseSetViewModel.DeleteUpdatedSetCommand"/>.</summary>
+        </member>
+        <member name="P:D424.ViewModels.ExerciseSetViewModel.DeleteUpdatedSetCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:D424.ViewModels.ExerciseSetViewModel.DeleteUpdatedSet(D424.Classes.ExerciseSets)"/>.</summary>
+        </member>
+        <member name="T:D424.ViewModels.ExerciseViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:D424.ViewModels.ExerciseViewModel.AvailableExercises">
+            <inheritdoc cref="F:D424.ViewModels.ExerciseViewModel.availableExercises"/>
+        </member>
+        <member name="P:D424.ViewModels.ExerciseViewModel.SelectedExercises">
+            <inheritdoc cref="F:D424.ViewModels.ExerciseViewModel.selectedExercises"/>
+        </member>
+        <member name="P:D424.ViewModels.ExerciseViewModel.SearchText">
+            <inheritdoc cref="F:D424.ViewModels.ExerciseViewModel.searchText"/>
+        </member>
+        <member name="P:D424.ViewModels.ExerciseViewModel.IsLoading">
+            <inheritdoc cref="F:D424.ViewModels.ExerciseViewModel.isLoading"/>
+        </member>
+        <member name="M:D424.ViewModels.ExerciseViewModel.OnSearchTextChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:D424.ViewModels.ExerciseViewModel.SearchText"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:D424.ViewModels.ExerciseViewModel.SearchText"/> is changed.</remarks>
+        </member>
+        <member name="F:D424.ViewModels.ExerciseViewModel.deleteExerciseCommand">
+            <summary>The backing field for <see cref="P:D424.ViewModels.ExerciseViewModel.DeleteExerciseCommand"/>.</summary>
+        </member>
+        <member name="P:D424.ViewModels.ExerciseViewModel.DeleteExerciseCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:D424.ViewModels.ExerciseViewModel.DeleteExercise(D424.Classes.Exercises)"/>.</summary>
+        </member>
+        <member name="F:D424.ViewModels.ExerciseViewModel.saveSelectedExercisesCommand">
+            <summary>The backing field for <see cref="P:D424.ViewModels.ExerciseViewModel.SaveSelectedExercisesCommand"/>.</summary>
+        </member>
+        <member name="P:D424.ViewModels.ExerciseViewModel.SaveSelectedExercisesCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:D424.ViewModels.ExerciseViewModel.SaveSelectedExercises"/>.</summary>
+        </member>
+        <member name="F:D424.ViewModels.ExerciseViewModel.addUpdatedExerciseCommand">
+            <summary>The backing field for <see cref="P:D424.ViewModels.ExerciseViewModel.AddUpdatedExerciseCommand"/>.</summary>
+        </member>
+        <member name="P:D424.ViewModels.ExerciseViewModel.AddUpdatedExerciseCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:D424.ViewModels.ExerciseViewModel.AddUpdatedExercise(D424.Classes.Exercises)"/>.</summary>
+        </member>
+        <member name="F:D424.ViewModels.ExerciseViewModel.deleteUpdatedExerciseCommand">
+            <summary>The backing field for <see cref="P:D424.ViewModels.ExerciseViewModel.DeleteUpdatedExerciseCommand"/>.</summary>
+        </member>
+        <member name="P:D424.ViewModels.ExerciseViewModel.DeleteUpdatedExerciseCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:D424.ViewModels.ExerciseViewModel.DeleteUpdatedExercise(D424.Classes.Exercises)"/>.</summary>
+        </member>
+        <member name="T:D424.ViewModels.ProfileViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:D424.ViewModels.ProfileViewModel.Username">
+            <inheritdoc cref="F:D424.ViewModels.ProfileViewModel._username"/>
+        </member>
+        <member name="P:D424.ViewModels.ProfileViewModel.Email">
+            <inheritdoc cref="F:D424.ViewModels.ProfileViewModel._email"/>
+        </member>
+        <member name="P:D424.ViewModels.ProfileViewModel.AccountCreated">
+            <inheritdoc cref="F:D424.ViewModels.ProfileViewModel._accountCreated"/>
+        </member>
+        <member name="P:D424.ViewModels.ProfileViewModel.ProfileImage">
+            <inheritdoc cref="F:D424.ViewModels.ProfileViewModel._profileImage"/>
+        </member>
+        <member name="T:D424.ViewModels.ReportViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:D424.ViewModels.ReportViewModel.CompletedWorkouts">
+            <inheritdoc cref="F:D424.ViewModels.ReportViewModel.completedWorkouts"/>
+        </member>
+        <member name="P:D424.ViewModels.ReportViewModel.SearchText">
+            <inheritdoc cref="F:D424.ViewModels.ReportViewModel.searchText"/>
+        </member>
+        <member name="P:D424.ViewModels.ReportViewModel.StartDate">
+            <inheritdoc cref="F:D424.ViewModels.ReportViewModel.startDate"/>
+        </member>
+        <member name="P:D424.ViewModels.ReportViewModel.EndDate">
+            <inheritdoc cref="F:D424.ViewModels.ReportViewModel.endDate"/>
+        </member>
+        <member name="M:D424.ViewModels.ReportViewModel.OnStartDateChanged(System.Nullable{System.DateTime})">
+            <summary>Executes the logic for when <see cref="P:D424.ViewModels.ReportViewModel.StartDate"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:D424.ViewModels.ReportViewModel.StartDate"/> is changed.</remarks>
+        </member>
+        <member name="M:D424.ViewModels.ReportViewModel.OnEndDateChanged(System.Nullable{System.DateTime})">
+            <summary>Executes the logic for when <see cref="P:D424.ViewModels.ReportViewModel.EndDate"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:D424.ViewModels.ReportViewModel.EndDate"/> is changed.</remarks>
+        </member>
+        <member name="F:D424.ViewModels.ReportViewModel.deleteWorkoutReportCommand">
+            <summary>The backing field for <see cref="P:D424.ViewModels.ReportViewModel.DeleteWorkoutReportCommand"/>.</summary>
+        </member>
+        <member name="P:D424.ViewModels.ReportViewModel.DeleteWorkoutReportCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:D424.ViewModels.ReportViewModel.DeleteWorkoutReport(D424.Classes.Reports)"/>.</summary>
+        </member>
+        <member name="F:D424.ViewModels.ReportViewModel.searchReportsCommand">
+            <summary>The backing field for <see cref="P:D424.ViewModels.ReportViewModel.SearchReportsCommand"/>.</summary>
+        </member>
+        <member name="P:D424.ViewModels.ReportViewModel.SearchReportsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:D424.ViewModels.ReportViewModel.SearchReports"/>.</summary>
+        </member>
+        <member name="T:D424.ViewModels.RoutineViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:D424.ViewModels.RoutineViewModel.ExerciseList">
+            <inheritdoc cref="F:D424.ViewModels.RoutineViewModel._exerciseList"/>
+        </member>
+        <member name="P:D424.ViewModels.RoutineViewModel.Routines">
+            <inheritdoc cref="F:D424.ViewModels.RoutineViewModel._routines"/>
+        </member>
+        <member name="P:D424.ViewModels.RoutineViewModel.NewRoutine">
+            <inheritdoc cref="F:D424.ViewModels.RoutineViewModel._newRoutine"/>
+        </member>
+        <member name="P:D424.ViewModels.RoutineViewModel.DeletedExercises">
+            <inheritdoc cref="F:D424.ViewModels.RoutineViewModel._deletedExercises"/>
+        </member>
+        <member name="P:D424.ViewModels.RoutineViewModel.OriginalRoutine">
+            <inheritdoc cref="F:D424.ViewModels.RoutineViewModel._originalRoutine"/>
+        </member>
+        <member name="P:D424.ViewModels.RoutineViewModel.EditedRoutine">
+            <inheritdoc cref="F:D424.ViewModels.RoutineViewModel._editedRoutine"/>
+        </member>
+        <member name="P:D424.ViewModels.RoutineViewModel.WorkoutDuration">
+            <inheritdoc cref="F:D424.ViewModels.RoutineViewModel._workoutDuration"/>
+        </member>
+        <member name="F:D424.ViewModels.RoutineViewModel.saveRoutineCommand">
+            <summary>The backing field for <see cref="P:D424.ViewModels.RoutineViewModel.SaveRoutineCommand"/>.</summary>
+        </member>
+        <member name="P:D424.ViewModels.RoutineViewModel.SaveRoutineCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:D424.ViewModels.RoutineViewModel.SaveRoutine"/>.</summary>
+        </member>
+        <member name="F:D424.ViewModels.RoutineViewModel.saveUpdateRoutineCommand">
+            <summary>The backing field for <see cref="P:D424.ViewModels.RoutineViewModel.SaveUpdateRoutineCommand"/>.</summary>
+        </member>
+        <member name="P:D424.ViewModels.RoutineViewModel.SaveUpdateRoutineCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:D424.ViewModels.RoutineViewModel.SaveUpdateRoutine"/>.</summary>
+        </member>
+        <member name="F:D424.ViewModels.RoutineViewModel.editRoutineCommand">
+            <summary>The backing field for <see cref="P:D424.ViewModels.RoutineViewModel.EditRoutineCommand"/>.</summary>
+        </member>
+        <member name="P:D424.ViewModels.RoutineViewModel.EditRoutineCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:D424.ViewModels.RoutineViewModel.EditRoutine(D424.Classes.Routines)"/>.</summary>
+        </member>
+        <member name="F:D424.ViewModels.RoutineViewModel.deleteRoutineCommand">
+            <summary>The backing field for <see cref="P:D424.ViewModels.RoutineViewModel.DeleteRoutineCommand"/>.</summary>
+        </member>
+        <member name="P:D424.ViewModels.RoutineViewModel.DeleteRoutineCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:D424.ViewModels.RoutineViewModel.DeleteRoutine(D424.Classes.Routines)"/>.</summary>
+        </member>
+        <member name="F:D424.ViewModels.RoutineViewModel.tapRoutineCommand">
+            <summary>The backing field for <see cref="P:D424.ViewModels.RoutineViewModel.TapRoutineCommand"/>.</summary>
+        </member>
+        <member name="P:D424.ViewModels.RoutineViewModel.TapRoutineCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:D424.ViewModels.RoutineViewModel.TapRoutine(D424.Classes.Routines)"/>.</summary>
+        </member>
+        <member name="F:D424.ViewModels.RoutineViewModel.finishAndSaveRoutineCommand">
+            <summary>The backing field for <see cref="P:D424.ViewModels.RoutineViewModel.FinishAndSaveRoutineCommand"/>.</summary>
+        </member>
+        <member name="P:D424.ViewModels.RoutineViewModel.FinishAndSaveRoutineCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:D424.ViewModels.RoutineViewModel.FinishAndSaveRoutine"/>.</summary>
+        </member>
+        <member name="T:D424.ViewModels.TimerViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:D424.ViewModels.TimerViewModel.TimerDisplay">
+            <inheritdoc cref="F:D424.ViewModels.TimerViewModel.timerDisplay"/>
+        </member>
+        <member name="P:D424.ViewModels.TimerViewModel.PhaseDisplay">
+            <inheritdoc cref="F:D424.ViewModels.TimerViewModel.phaseDisplay"/>
+        </member>
+        <member name="P:D424.ViewModels.TimerViewModel.StartStopButtonText">
+            <inheritdoc cref="F:D424.ViewModels.TimerViewModel.startStopButtonText"/>
+        </member>
+        <member name="F:D424.ViewModels.TimerViewModel.startStopCommand">
+            <summary>The backing field for <see cref="P:D424.ViewModels.TimerViewModel.StartStopCommand"/>.</summary>
+        </member>
+        <member name="P:D424.ViewModels.TimerViewModel.StartStopCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:D424.ViewModels.TimerViewModel.StartStop"/>.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsCompleted">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsCompleted" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ExerciseSets">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ExerciseSets" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedSet">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedSet" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AvailableExercises">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AvailableExercises" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedExercises">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedExercises" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SearchText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SearchText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsLoading">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsLoading" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Username">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Username" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Email">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Email" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AccountCreated">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AccountCreated" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ProfileImage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ProfileImage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CompletedWorkouts">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CompletedWorkouts" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.StartDate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "StartDate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.EndDate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "EndDate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ExerciseList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ExerciseList" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Routines">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Routines" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.NewRoutine">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "NewRoutine" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DeletedExercises">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DeletedExercises" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.OriginalRoutine">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "OriginalRoutine" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.EditedRoutine">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "EditedRoutine" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.WorkoutDuration">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "WorkoutDuration" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TimerDisplay">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TimerDisplay" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PhaseDisplay">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PhaseDisplay" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.StartStopButtonText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "StartStopButtonText" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsCompleted">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsCompleted" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ExerciseSets">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ExerciseSets" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedSet">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedSet" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AvailableExercises">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AvailableExercises" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedExercises">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedExercises" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SearchText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SearchText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsLoading">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsLoading" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Username">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Username" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Email">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Email" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AccountCreated">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AccountCreated" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ProfileImage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ProfileImage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CompletedWorkouts">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CompletedWorkouts" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.StartDate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "StartDate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.EndDate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "EndDate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ExerciseList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ExerciseList" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Routines">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Routines" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.NewRoutine">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "NewRoutine" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DeletedExercises">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DeletedExercises" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.OriginalRoutine">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "OriginalRoutine" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.EditedRoutine">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "EditedRoutine" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.WorkoutDuration">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "WorkoutDuration" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TimerDisplay">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TimerDisplay" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PhaseDisplay">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PhaseDisplay" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.StartStopButtonText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "StartStopButtonText" generated properties.</summary>
+        </member>
+    </members>
+</doc>

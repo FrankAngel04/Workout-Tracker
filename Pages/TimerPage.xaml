@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="D424.Pages.TimerPage"
+             xmlns:vm="clr-namespace:D424.ViewModels"
+             x:DataType="vm:TimerViewModel"
+             BackgroundColor="#121212">
+
+    <Grid RowDefinitions="*, Auto, Auto, Auto, Auto, Auto" Padding="30" RowSpacing="20">
+        
+        <Frame Grid.Row="0"
+           Padding="30"
+           BackgroundColor="{Binding TimerBackgroundColor}"
+           CornerRadius="180"
+           WidthRequest="270"
+           HeightRequest="260"
+           VerticalOptions="Center"
+           HorizontalOptions="Center">
+            <Label Text="{Binding TimerDisplay}"
+                   FontSize="72"
+                   TextColor="White"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   FontAttributes="Bold"/>
+        </Frame>
+
+
+        <Label Grid.Row="1"
+               Text="{Binding PhaseDisplay}"
+               FontSize="34"
+               TextColor="{Binding PhaseTextColor}"
+               FontAttributes="Bold"
+               Padding="0,10,0,0"
+               HorizontalOptions="Center"
+               VerticalOptions="Start"/>
+
+        <Button Grid.Row="2"
+                Text="{Binding StartStopButtonText}"
+                Command="{Binding StartStopCommand}"
+                FontSize="20"
+                BackgroundColor="{Binding StartStopButtonColor}"
+                TextColor="Black"
+                CornerRadius="15"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                WidthRequest="200"/>
+
+        <StackLayout Grid.Row="3" Orientation="Horizontal" HorizontalOptions="Center" Spacing="5">
+            <Label Text="Run Time:" TextColor="White" FontSize="16" FontAttributes="Bold" VerticalOptions="Center"/>
+            <Frame CornerRadius="10" BackgroundColor="#333" Padding="3" WidthRequest="60" HeightRequest="50">
+                <Picker Title="Min" ItemsSource="{Binding MinuteOptions}" SelectedItem="{Binding SelectedRunMinutes}"
+                        TextColor="White" BackgroundColor="Transparent" HorizontalTextAlignment="Center"/>
+            </Frame>
+            <Label Text=":" TextColor="White" FontSize="18" FontAttributes="Bold" VerticalOptions="Center"/>
+            <Frame CornerRadius="10" BackgroundColor="#333" Padding="3" WidthRequest="60" HeightRequest="50">
+                <Picker Title="Sec" ItemsSource="{Binding SecondOptions}" SelectedItem="{Binding SelectedRunSeconds}"
+                        TextColor="White" BackgroundColor="Transparent" HorizontalTextAlignment="Center"/>
+            </Frame>
+        </StackLayout>
+
+        <StackLayout Grid.Row="4" Orientation="Horizontal" HorizontalOptions="Center" Spacing="5">
+            <Label Text="Rest Time:" TextColor="White" FontSize="16" FontAttributes="Bold" VerticalOptions="Center"/>
+            <Frame CornerRadius="10" BackgroundColor="#333" Padding="3" WidthRequest="60" HeightRequest="50">
+                <Picker Title="Min" ItemsSource="{Binding MinuteOptions}" SelectedItem="{Binding SelectedRestMinutes}"
+                        TextColor="White" BackgroundColor="Transparent" HorizontalTextAlignment="Center"/>
+            </Frame>
+            <Label Text=":" TextColor="White" FontSize="18" FontAttributes="Bold" VerticalOptions="Center"/>
+            <Frame CornerRadius="10" BackgroundColor="#333" Padding="3" WidthRequest="60" HeightRequest="50">
+                <Picker Title="Sec" ItemsSource="{Binding SecondOptions}" SelectedItem="{Binding SelectedRestSeconds}"
+                        TextColor="White" BackgroundColor="Transparent" HorizontalTextAlignment="Center"/>
+            </Frame>
+        </StackLayout>
+
+        <StackLayout Grid.Row="5" Orientation="Horizontal" HorizontalOptions="Center" Spacing="5">
+            <Label Text="Intervals:" TextColor="White" FontSize="16" FontAttributes="Bold" VerticalOptions="Center"/>
+            <Frame CornerRadius="10" BackgroundColor="#333" Padding="3" WidthRequest="60" HeightRequest="50">
+                <Picker ItemsSource="{Binding IntervalOptions}" SelectedItem="{Binding SelectedIntervals}"
+                        TextColor="White" BackgroundColor="Transparent" HorizontalTextAlignment="Center"/>
+            </Frame>
+        </StackLayout>
+    </Grid>
+</ContentPage>

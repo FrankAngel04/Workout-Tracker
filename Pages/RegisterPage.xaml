@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="D424.Pages.RegisterPage"
+             Title="Register"
+             Shell.NavBarIsVisible="False"
+             HideSoftInputOnTapped="True"
+             BackgroundColor="#121212">
+
+    <StackLayout Padding="30" Spacing="15"
+                 VerticalOptions="Center"
+                 HorizontalOptions="Center">
+        
+        <Label Text="Create Your Account"
+               FontSize="24"
+               TextColor="White"
+               HorizontalOptions="Center"/>
+
+        <Frame Padding="10" BackgroundColor="#1E1E1E" CornerRadius="10"
+               WidthRequest="280">
+            <Entry x:Name="UsernameEntry"
+                   Placeholder="Username"
+                   Focused="OnEntryFocused"
+                   PlaceholderColor="Gray"
+                   TextColor="White"
+                   FontSize="18"/>
+        </Frame>
+
+        <Frame Padding="10" BackgroundColor="#1E1E1E" CornerRadius="10"
+               WidthRequest="280">
+            <Entry x:Name="PasswordEntry"
+                   Placeholder="Password"
+                   Focused="OnPasswordFocused"
+                   TextChanged="OnPasswordTextChanged"
+                   PlaceholderColor="Gray"
+                   TextColor="White"
+                   FontSize="18"
+                   IsPassword="True"/>
+        </Frame>
+
+        <Frame Padding="10" BackgroundColor="#1E1E1E" CornerRadius="10"
+               WidthRequest="280">
+            <Entry x:Name="ConfirmPasswordEntry"
+                   Placeholder="Confirm Password"
+                   Focused="OnEntryFocused"
+                   PlaceholderColor="Gray"
+                   TextColor="White"
+                   FontSize="18"
+                   IsPassword="True"/>
+        </Frame>
+
+        <StackLayout x:Name="PasswordRequirements" Spacing="5" IsVisible="False">
+               <Label x:Name="UppercaseRequirement" Text="• At least one uppercase letter" TextColor="Red"/>
+               <Label x:Name="LowercaseRequirement" Text="• At least one lowercase letter" TextColor="Red"/>
+               <Label x:Name="NumberRequirement" Text="• At least one number" TextColor="Red"/>
+        </StackLayout>
+        
+        <Label x:Name="ErrorLabel"
+               Text=""
+               TextColor="Red"
+               FontSize="16"
+               HorizontalOptions="Center"
+               IsVisible="False"/>
+
+        <Button Text="Register"
+                Clicked="OnRegisterClicked"
+                BackgroundColor="#3A7AFE"
+                TextColor="White"
+                FontSize="18"
+                Padding="10"
+                CornerRadius="10"
+                WidthRequest="220"/>
+        
+        <Button Text="Already have an account? Log in"
+                Clicked="OnLoginClicked"
+                BackgroundColor="Transparent"
+                TextColor="White"
+                FontSize="16"
+                Padding="5"
+                WidthRequest="220"/>
+    </StackLayout>
+</ContentPage>

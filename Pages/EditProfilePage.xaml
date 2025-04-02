@@ -1,0 +1,98 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="D424.Pages.EditProfilePage"
+             Title="Edit Profile"
+             Shell.NavBarIsVisible="False"
+             HideSoftInputOnTapped="True"
+             BackgroundColor="#121212">
+
+    <ScrollView>
+        <Grid Padding="20">
+            <Grid RowDefinitions="Auto" ColumnDefinitions="*, Auto">
+                <Label Text="Edit Profile"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       HorizontalOptions="Center"
+                       Grid.Column="0"
+                       VerticalOptions="Center"/>
+                
+                <Button Text="✖"
+                        FontSize="18"
+                        BackgroundColor="Transparent"
+                        TextColor="Red"
+                        Padding="5"
+                        Clicked="OnCloseClicked"
+                        Grid.Column="1"/>
+            </Grid>
+
+            <VerticalStackLayout Padding="0,40,0,0" Spacing="15">
+                <Label Text="New Username" FontSize="14" TextColor="LightGray"/>
+                <Frame BackgroundColor="#1E1E1E" CornerRadius="10" Padding="5">
+                    <Entry x:Name="NewUsernameEntry"
+                           Placeholder="Enter new username"
+                           Focused="OnEntryFocused"
+                           TextColor="White"
+                           BackgroundColor="Transparent"
+                           PlaceholderColor="Gray"/>
+                </Frame>
+
+                <Label Text="Current Password" FontSize="14" TextColor="LightGray"/>
+                <Frame BackgroundColor="#1E1E1E" CornerRadius="10" Padding="5">
+                    <Entry x:Name="CurrentPasswordEntry"
+                           IsPassword="True"
+                           Placeholder="Enter current password"
+                           Focused="OnEntryFocused"
+                           TextColor="White"
+                           BackgroundColor="Transparent"
+                           PlaceholderColor="Gray"/>
+                </Frame>
+
+                <Label Text="(Optional) Change Password" FontSize="14" TextColor="LightGray"
+                       HorizontalOptions="Center" Margin="5,0,5,5"/>
+
+                <Frame BackgroundColor="#1E1E1E" CornerRadius="10" Padding="5">
+                    <Entry x:Name="NewPasswordEntry"
+                           IsPassword="True"
+                           Placeholder="Enter new password"
+                           Focused="OnNewPasswordFocused"
+                           TextChanged="OnPasswordTextChanged"
+                           TextColor="White"
+                           BackgroundColor="Transparent"
+                           PlaceholderColor="Gray"/>
+                </Frame>
+
+                <Frame BackgroundColor="#1E1E1E" CornerRadius="10" Padding="5">
+                    <Entry x:Name="ConfirmPasswordEntry"
+                           IsPassword="True"
+                           Placeholder="Confirm new password"
+                           Focused="OnEntryFocused"
+                           TextColor="White"
+                           BackgroundColor="Transparent"
+                           PlaceholderColor="Gray"/>
+                </Frame>
+                
+                <StackLayout x:Name="PasswordRequirements" IsVisible="False" Padding="5">
+                    <Label x:Name="UppercaseRequirement" Text="• At least one uppercase letter" TextColor="Red"/>
+                    <Label x:Name="LowercaseRequirement" Text="• At least one lowercase letter" TextColor="Red"/>
+                    <Label x:Name="NumberRequirement" Text="• At least one number" TextColor="Red"/>
+                </StackLayout>
+
+                <Label x:Name="ErrorLabel"
+                       Text=""
+                       TextColor="Red"
+                       FontSize="14"
+                       IsVisible="False"/>
+                
+                <Button x:Name="SaveChangesButton"
+                        Text="Save Changes"
+                        Clicked="OnSaveChangesClicked"
+                        BackgroundColor="#3A7AFE"
+                        TextColor="White"
+                        CornerRadius="20"
+                        HeightRequest="50"
+                        FontAttributes="Bold"/>
+            </VerticalStackLayout>
+        </Grid>
+    </ScrollView> 
+</ContentPage>
